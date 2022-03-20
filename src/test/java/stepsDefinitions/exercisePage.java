@@ -54,7 +54,7 @@ public class exercisePage {
 		exc.dropDown4.click();
 		exc.dropDown5.click();
 		exc.dropDown6.click();
-		List<Float> newPrecios = new ArrayList<Float>();
+		// List<Float> newPrecios = new ArrayList<Float>();
 		List<WebElement> precios = driver.findElements(By.className("price"));
 		float temp = 0;
 		 for (int i=0; i<precios.size();i++){
@@ -79,20 +79,19 @@ public class exercisePage {
 			 
 			 temp = newPrecio;
 			 
-			 newPrecios.add(newPrecio);
+			 //newPrecios.add(newPrecio);
 
 		    }
-//		 System.out.println("MAAAMAAA I KILL A MAAAAN");
+
 //		 for (int i=0; i<newPrecios.size();i++){
 //			 System.out.println(newPrecios.get(i));
 //		 }
-//		 
-//		 System.out.println("NOW SORTED ALV");
+
 //		 Collections.sort(newPrecios);
 //		 for (int i=0; i<newPrecios.size();i++){
 //			 System.out.println(newPrecios.get(i));
 //		 }
-//		 System.out.println("NOW SORTED ALV inverso");
+
 //		 Collections.sort(newPrecios, Collections.reverseOrder());
 //		 for (int i=0; i<newPrecios.size();i++){
 //			 System.out.println(newPrecios.get(i));
