@@ -73,7 +73,7 @@ public class exercisePage {
 			 precio = precio.substring(1);
 			 float newPrecio = Float.parseFloat(precio);
 			 if (i>0) {
-				 System.out.println("AQUI ANDO HACIENDO LA ASSERTIOOONNNN");
+				
 				 System.out.println("amos a comarar: "+temp+"con: "+newPrecio);
 				 Assert.assertTrue(temp>=newPrecio);
 			 }
@@ -87,7 +87,7 @@ public class exercisePage {
 //		 for (int i=0; i<newPrecios.size();i++){
 //			 System.out.println(newPrecios.get(i));
 //		 }
-		 System.out.println("AQUI ANDO HACIENDOots cosa");
+	
 //		 Collections.sort(newPrecios);
 //		 for (int i=0; i<newPrecios.size();i++){
 //			 System.out.println(newPrecios.get(i));
