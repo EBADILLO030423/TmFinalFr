@@ -97,6 +97,10 @@ public class exercisePage {
 //		 for (int i=0; i<newPrecios.size();i++){
 //			 System.out.println(newPrecios.get(i));
 //		 }
+		// Collections.sort(newPrecios, Collections.reverseOrder());
+//		 for (int i=0; i<newPrecios.size();i++){
+//			 System.out.println(newPrecios.get(i));
+//		 }
 		 
 		 
 		
