@@ -30,6 +30,7 @@ public class exercisePage {
 		driver = new ChromeDriver();
 		driver.get("https://practice.automationbro.com/");
 		exc = new exersiceMap(driver);
+		 System.out.println("AQUI ANDO HACIENDO LA ASSERTIOOONNNN");
 	}
 
 	@When("User should be able to click on shop button")
