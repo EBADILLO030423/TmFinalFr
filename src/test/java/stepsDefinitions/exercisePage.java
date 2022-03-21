@@ -30,7 +30,6 @@ public class exercisePage {
 		driver = new ChromeDriver();
 		driver.get("https://practice.automationbro.com/");
 		exc = new exersiceMap(driver);
-		 System.out.println("AQUI ANDO HACIENDO LA ASSERTIOOONNNN");
 	}
 
 	@When("User should be able to click on shop button")
@@ -157,7 +156,14 @@ public class exercisePage {
 
 	@When("User should have ability to checkout")
 	public void user_should_have_ability_to_checkout() {
-		
+		exc.shopButton.click();
+		exc.searchButton.click();
+		exc.searchBox.sendKeys("Canon");
+		exc.searchBox.sendKeys(Keys.ENTER);
+		exc.cannonBtn.click();
+		exc.cannonAdd.click();
+		exc.cartButton.click();
+		exc.checkoutButton.click();
 	}
 
 }

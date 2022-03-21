@@ -101,7 +101,35 @@ public class exersiceMap {
 		
 		@FindBy(xpath= "//button[@value='Update cart']")
 		public WebElement update;
-		
+		@FindBy(xpath= "//input[@name='billing_first_name']")
+		public WebElement name;
+		@FindBy(xpath= "//input[@name='billing_last_name']")
+		public WebElement lastName;
+		@FindBy(xpath= "//input[@name='billing_company']")
+		public WebElement company;
+		@FindBy(xpath= "//span[@id='select2-billing_country-container']")
+		public WebElement country;
+		@FindBy(xpath= "//input[@name='billing_address_1']")
+		public WebElement address1;
+		@FindBy(xpath= "//input[@name='billing_address_2']")
+		public WebElement address2;
+		@FindBy(xpath= "//input[@id='billing_city']")
+		public WebElement city;
+		@FindBy(xpath= "//input[@id='billing_state']")
+		public WebElement state;
+		@FindBy(xpath= "//input[@id='billing_postcode']")
+		public WebElement postCode;
+		@FindBy(xpath= "//input[@id='billing_phone']")
+		public WebElement phoneNumber;
+		@FindBy(xpath= "//input[@id='billing_email']")
+		public WebElement email;
+		@FindBy(css= "#place_order")
+		public WebElement placeOrder;
+		@FindBy(xpath= "//input[@id='fileName_1']")
+		public WebElement insertText;
+	
+		@FindBy(xpath= "//li[@id='select2-billing_country-result-c0b6-CA']")
+		public WebElement canada;
 }
 
 	
