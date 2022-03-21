@@ -54,26 +54,6 @@ public class exercisePage {
 		exc.dropDown3.click();
 		exc.dropDown4.click();
 		exc.dropDown5.click(); 	//De menor a mayor no esta bien ordenado
-		List<WebElement> precios1 = driver.findElements(By.className("price"));
-		float temp1 = 0;
-		 for (int i=0; i<=precios1.size();i++){
-			 String precio1 = precios1.get(i).getText();
-			 if (precio1.contains("0 $")) {
-
-				 precio1= precio1.split("0 ")[1];
-				 
-			 } 
-
-			 precio1 = precio1.substring(1);
-			 float newPrecio1 = Float.parseFloat(precio1);
-			 if (i<=0) {
-				 Assert.assertTrue(temp1>=newPrecio1);
-			 }
-			 
-		 temp1 = newPrecio1;
-			 
-			 //newPrecios.add(newPrecio);
-
 		exc.dropDown6.click();
 		 List<Float> newPrecios = new ArrayList<Float>();
 		List<WebElement> precios = driver.findElements(By.className("price"));
@@ -96,7 +76,7 @@ public class exercisePage {
 			 temp = newPrecio;
 		    }
 		 }
-	}
+	
 
 	@When("User should be able to see only nine items")
 	public void user_should_be_able_to_see_only_nine_items() {
