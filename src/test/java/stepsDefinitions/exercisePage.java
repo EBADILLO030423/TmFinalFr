@@ -53,57 +53,49 @@ public class exercisePage {
 		exc.dropDown2.click();
 		exc.dropDown3.click();
 		exc.dropDown4.click();
-		exc.dropDown5.click();
+		exc.dropDown5.click(); 	//De menor a mayor no esta bien ordenado
+		List<WebElement> precios1 = driver.findElements(By.className("price"));
+		float temp1 = 0;
+		 for (int i=0; i<=precios1.size();i++){
+			 String precio1 = precios1.get(i).getText();
+			 if (precio1.contains("0 $")) {
+
+				 precio1= precio1.split("0 ")[1];
+				 
+			 } 
+
+			 precio1 = precio1.substring(1);
+			 float newPrecio1 = Float.parseFloat(precio1);
+			 if (i<=0) {
+				 Assert.assertTrue(temp1>=newPrecio1);
+			 }
+			 
+		 temp1 = newPrecio1;
+			 
+			 //newPrecios.add(newPrecio);
+
 		exc.dropDown6.click();
-		// List<Float> newPrecios = new ArrayList<Float>();
+		 List<Float> newPrecios = new ArrayList<Float>();
 		List<WebElement> precios = driver.findElements(By.className("price"));
-		float temp = 0;
-		 for (int i=0; i<precios.size();i++){
-			 String precio = precios.get(i).getText();
-			 System.out.println("text price" +i+": "+ precio);
+		float temp = 0;//400
+		 for (int i1=0; i1<precios.size();i1++){
+			 String precio = precios.get(i1).getText();
+			 System.out.println("text price" +i1+": "+ precio);
 			 // Ver si tiene 2 precios
 			 if (precio.contains("0 $")) {
-				 System.out.println("MAMMAAAAA OHHH YYYHHH");
 
 				 precio= precio.split("0 ")[1];
 				 
-				 System.out.println(precio);
 			 } 
 
 			 precio = precio.substring(1);
 			 float newPrecio = Float.parseFloat(precio);
-			 if (i>0) {
-				
-				 System.out.println("amos a comarar: "+temp+"con: "+newPrecio);
+			 if (i1>0) {
 				 Assert.assertTrue(temp>=newPrecio);
-			 }
-			 
+			 } 
 			 temp = newPrecio;
-			 
-			 //newPrecios.add(newPrecio);
-
 		    }
-
-//		 for (int i=0; i<newPrecios.size();i++){
-//			 System.out.println(newPrecios.get(i));
-//		 }
-	
-//		 Collections.sort(newPrecios);
-//		 for (int i=0; i<newPrecios.size();i++){
-//			 System.out.println(newPrecios.get(i));
-//		 }
-
-//		 Collections.sort(newPrecios, Collections.reverseOrder());
-//		 for (int i=0; i<newPrecios.size();i++){
-//			 System.out.println(newPrecios.get(i));
-//		 }
-		// Collections.sort(newPrecios, Collections.reverseOrder());
-//		 for (int i=0; i<newPrecios.size();i++){
-//			 System.out.println(newPrecios.get(i));
-//		 }
-		 
-		 
-		
+		 }
 	}
 
 	@When("User should be able to see only nine items")
@@ -185,6 +177,7 @@ public class exercisePage {
 
 	@When("User should have ability to checkout")
 	public void user_should_have_ability_to_checkout() {
+		
 	}
 
 }
